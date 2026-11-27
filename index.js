@@ -264,7 +264,7 @@ export function apply(ctx, rawConfig = {}) {
     const id = String(body?.id ?? '')
     if (!id) return json(res, 400, { error: '缺少模型 id' })
     await store.update((state) => {
-      const row = state.models[id] ?? { enabled: true, image: false }
+      const row = state.models[id] ?? { enabled: true, image: true }
       if (body?.enabled !== undefined) row.enabled = body.enabled === true
       if (body?.image !== undefined) row.image = body.image === true
       state.models[id] = row
@@ -469,7 +469,7 @@ async function snapshot(store, settings) {
     free: model.free === true,
     tag: model.tag ?? '',
     enabled: state.models?.[model.key]?.enabled !== false,
-    image: state.models?.[model.key]?.image === true,
+    image: state.models?.[model.key]?.image !== false,
   }))
   const active = state.accounts.find((row) => row.id === state.activeAccountId)
   const quota = active ? state.quota?.[active.id] : undefined
