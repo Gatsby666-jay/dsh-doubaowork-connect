@@ -62,6 +62,7 @@ window.__ModuleLoader__.load({
 				'models.levels': '推理档位',
 				'models.enabled': '显示',
 				'models.image': '图片输入',
+				'models.imageHint': '打开后该模型才会接收图片，也才会出现在能选图片的模型里。',
 				'models.needUpgrade': '需订阅',
 				'models.noModels': '目录还没有刷新成功，先点一次刷新。',
 				'credits.title': '积分',
@@ -136,6 +137,7 @@ window.__ModuleLoader__.load({
 				'models.levels': 'Reasoning efforts',
 				'models.enabled': 'Show',
 				'models.image': 'Image input',
+				'models.imageHint': 'Turn this on and the model accepts images — and appears among the models you can pick an image with.',
 				'models.needUpgrade': 'Subscription',
 				'models.noModels': 'The catalog has not loaded yet. Refresh it.',
 				'credits.title': 'Credits',
@@ -702,6 +704,11 @@ window.__ModuleLoader__.load({
 
 			return h('div', { className: 'dcbw-panel' }, [
 				h('div', { className: 'dcbw-hint', key: 'intro' }, t('models.intro')),
+				// The selector hides image capability until the switch is on, so a
+				// user who never found the switch sees "this model cannot take
+				// images" from the composer and has nothing to act on. Say where
+				// the switch is, next to the list it controls.
+				h('div', { className: 'dcbw-hint', key: 'imageHint' }, t('models.imageHint')),
 				// The baseline catalog exists so the selector works before the first
 				// refresh, but every multiplier in it is blank. Say so, instead of
 				// letting a table of em-dashes imply upstream reported nothing.
