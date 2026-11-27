@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "DSH Connect 豆包工作",
+    "description": "Connect the locally signed-in 豆包工作 account to the DeepSeek Harness model selector. Every refresh reads each model's credit multiplier from the upstream catalog, with per-model image-input switches, multi-account switching and automatic account-pool failover, daily check-in status, and read-only credit readouts in the card and the composer.",
+    "detail": "docs/DETAIL.md"
+  },
+  "settings": {
+    "title": "豆包工作",
+    "tabs": {
+      "account": "Accounts",
+      "models": "Models"
+    },
+    "account": {
+      "intro": "Read the sign-in from the local Doubao client, or paste a Cookie once. The plugin is read-only and never modifies the client.",
+      "importDesktop": "Read from local Doubao",
+      "importCookie": "Sign in with a cookie",
+      "cookiePlaceholder": "sessionid=...; passport_csrf_token=...",
+      "cookieHint": "Copy the Cookie request header from a signed-in www.doubao.com tab. sessionid is required.",
+      "accounts": "Signed-in accounts",
+      "active": "In use",
+      "select": "Switch to this account",
+      "remove": "Remove",
+      "rename": "Rename",
+      "recheck": "Clear cooldowns and retry",
+      "cooldown": "Cooling down",
+      "pool": "Account pool",
+      "poolOn": "Automatic failover across the pool",
+      "poolHint": "When on, the checked accounts serve in turn; if one has an expired session, is asked to verify, or is rate limited, the request moves to the next account.",
+      "poolMembers": "Accounts in the pool",
+      "empty": "No Doubao account is signed in yet."
+    },
+    "models": {
+      "intro": "The catalog comes from upstream, and so does every multiplier. The plugin neither hardcodes nor guesses them.",
+      "refresh": "Refresh catalog",
+      "refreshing": "Refreshing…",
+      "source": "Catalog source",
+      "updatedAt": "Last refresh",
+      "count": "Models",
+      "rate": "Credit multiplier",
+      "rateUnknown": "Not reported upstream",
+      "context": "Context",
+      "levels": "Reasoning efforts",
+      "enabled": "Show in the selector",
+      "image": "Allow image input",
+      "needUpgrade": "Subscription required",
+      "noModels": "The catalog has not loaded yet. Refresh it below."
+    },
+    "credits": {
+      "title": "Credits",
+      "quota": "Allowance",
+      "remaining": "Remaining",
+      "used": "Used",
+      "checkin": "Daily check-in",
+      "checkedIn": "Checked in",
+      "notCheckedIn": "Not checked in",
+      "continuous": "Streak",
+      "days": "d",
+      "checkinReadOnly": "Check-in is only possible in the Doubao client. The plugin is read-only and never claims it.",
+      "refresh": "Refresh credits",
+      "noData": "No credit reading yet. Refresh once."
+    },
+    "composer": {
+      "account": "Account",
+      "remaining": "Credits left",
+      "checkedIn": "Checked in",
+      "notCheckedIn": "Not checked in",
+      "open": "Open credit details"
+    }
+  }
+}

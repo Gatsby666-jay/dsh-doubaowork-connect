@@ -1,0 +1,5 @@
+# Register the 豆包工作 provider without touching the profile's default model.
+# The plugin reuses the Doubao desktop client's sign-in; no OAuth flow is started.
+- insert:
+    - id: dsh-doubaowork-connect
+      name: dsh-doubaowork-connect

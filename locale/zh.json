@@ -1,0 +1,70 @@
+{
+  "meta": {
+    "title": "DSH Connect 豆包工作",
+    "description": "把本机登录的豆包工作接入 DeepSeek Harness 的模型选择器。每次刷新按上游目录读取每个模型的积分倍率，支持逐模型图片输入开关、多账号切换与账号池自动换号，并提供每日签到状态与卡片、输入框里的只读积分读数。",
+    "detail": "docs/DETAIL.md"
+  },
+  "settings": {
+    "title": "豆包工作",
+    "tabs": {
+      "account": "账号",
+      "models": "模型"
+    },
+    "account": {
+      "intro": "从本机豆包客户端读取登录态，或者粘贴一次 Cookie。插件只读，不会改动客户端。",
+      "importDesktop": "从本机豆包读取",
+      "importCookie": "粘贴 Cookie 登录",
+      "cookiePlaceholder": "sessionid=...; passport_csrf_token=...",
+      "cookieHint": "在已登录的 www.doubao.com 页面里复制 Cookie 请求头即可，至少需要 sessionid。",
+      "accounts": "已登录账号",
+      "active": "当前使用",
+      "select": "切换到此账号",
+      "remove": "移除",
+      "rename": "重命名",
+      "recheck": "清除冷却并重试",
+      "cooldown": "冷却中",
+      "pool": "账号池",
+      "poolOn": "开启账号池自动换号",
+      "poolHint": "开启后，勾选的账号轮流服务；某个账号登录失效、被要求验证或被限流时，本次请求自动换下一个账号。",
+      "poolMembers": "参与账号池的账号",
+      "empty": "还没有登录任何豆包账号。"
+    },
+    "models": {
+      "intro": "目录来自上游，倍率由上游给出，插件不写死也不猜。",
+      "refresh": "刷新模型目录",
+      "refreshing": "正在刷新…",
+      "source": "目录来源",
+      "updatedAt": "上次刷新",
+      "count": "模型数",
+      "rate": "积分倍率",
+      "rateUnknown": "上游未给出",
+      "context": "上下文",
+      "levels": "推理档位",
+      "enabled": "在选择器里显示",
+      "image": "允许图片输入",
+      "needUpgrade": "需要订阅",
+      "noModels": "目录还没有刷新成功，先在下面点一次刷新。"
+    },
+    "credits": {
+      "title": "积分",
+      "quota": "额度",
+      "remaining": "剩余",
+      "used": "已用",
+      "checkin": "每日签到",
+      "checkedIn": "今日已签",
+      "notCheckedIn": "今日未签",
+      "continuous": "连续",
+      "days": "天",
+      "checkinReadOnly": "签到只能在豆包客户端里完成，插件只读，不会代签。",
+      "refresh": "刷新积分",
+      "noData": "还没有积分读数，点一次刷新。"
+    },
+    "composer": {
+      "account": "账号",
+      "remaining": "剩余积分",
+      "checkedIn": "已签到",
+      "notCheckedIn": "未签到",
+      "open": "打开积分详情"
+    }
+  }
+}
